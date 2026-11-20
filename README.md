@@ -12,6 +12,9 @@ companion sprites in `js/`.
 The page uses `pausa.companion.app@gmail.com` (three `mailto:` links: Join the beta, the privacy note and the
 footer). Search for it if you ever need to change it.
 
+The Instagram account is `@pausa.companion` (links in the footer, the Join the beta section and the privacy
+note). It is also linked from the Pausa app, in `src/lib/links.ts` and `src-tauri/src/tray.rs`.
+
 ## Preview locally
 
 ```bash
