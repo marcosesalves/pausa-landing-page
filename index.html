@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Pausa: small pauses for a calmer day</title>
+<meta name="description" content="Pausa is a small macOS app that invites you to take short, gentle pauses during your workday, with Pip, a little sprout, for company. Currently in a closed beta.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pausa: small pauses for a calmer day">
+<meta property="og:description" content="A small macOS app that invites you to take short, gentle pauses during your workday, with Pip, a little sprout, for company. Closed beta.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/fredoka-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/nunito-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/mindfulness.css">
+<link rel="stylesheet" href="css/landing.css">
+<script src="js/icons.js" defer></script>
+<script src="js/companion.js" defer></script>
+</head>
+<body>
+<div class="mf lp">
+<a class="lp-skip btn btn--primary" href="#main">Skip to content</a>
+<div class="lp-ambient" aria-hidden="true"><span class="ambient__blob ambient__blob--1"></span><span class="ambient__blob ambient__blob--2"></span><span class="ambient__blob ambient__blob--3"></span></div>
+<header class="lp-wrap lp-header" id="top">
+<a class="lp-brand" href="#top"><svg viewBox="0 0 18 18" aria-hidden="true"><use href="#t-sprout"></use></svg>Pausa</a>
+<nav class="lp-nav" aria-label="Sections"><a href="#what">What it does</a><a href="#privacy">Privacy</a><a href="#beta">Join the beta</a></nav>
+<span class="lp-pill">Closed beta</span>
+</header>
+<main id="main">
+<section class="lp-wrap lp-hero" id="hero" aria-labelledby="hero-title">
+<div class="lp-hero__text">
+<span class="badge cat cat--nature" style="--i:0"><svg class="icon"><use href="#t-sprout"></use></svg>For macOS · closed beta</span>
+<h1 class="lp-h1" id="hero-title" style="--i:1">A small friend for small pauses.</h1>
+<p class="lp-lead" style="--i:2">Pausa lives in your Mac's menu bar. Every so often it invites you to stop for a moment, and Pip, a little sprout, takes the pause with you.</p>
+<div class="lp-actions" style="--i:3"><a class="btn btn--primary lp-btn" href="#beta">Join the beta</a><a class="btn btn--soft lp-btn" href="#what">See how it works</a></div>
+</div>
+<div class="lp-scene desk" role="img" aria-label="A Mac desktop softly blurred behind a glass card that reads: One slow breath? I'll do it with you. Pip the sprout sits on top of the card.">
+<div aria-hidden="true">
+<div class="win" style="left:8%;top:10%;width:62%;height:52%"><div class="win__bar" style="height:28px"><span class="win__dot"></span><span class="win__dot"></span><span class="win__dot"></span></div><div class="win__body"><div class="win__line" style="width:50%"></div><div class="win__line"></div><div class="win__line" style="width:80%"></div></div></div>
+<div class="win" style="left:44%;top:24%;width:50%;height:44%"><div class="win__bar" style="height:28px"><span class="win__dot"></span><span class="win__dot"></span><span class="win__dot"></span></div><div class="win__body"><div style="height:60px;border-radius:8px;background:rgba(127,140,130,.16)"></div><div class="win__line"></div></div></div>
+<div class="dock"><span class="dock__app" style="--c:#cdd6e4"></span><span class="dock__app" style="--c:#e8d9b8"></span><span class="dock__app" style="--c:#d9c8de"></span><span class="dock__app" style="--c:#c7dccf"></span><span class="dock__app app-icon" style="--pet-body:rgba(255,255,255,.5);--pet-leaf:rgba(255,255,255,.62);--pet-ink:#fff;--pet-eye:#1f4a30;--pet-hl:#fff;--pet-sw:6"><svg class="companion-static" viewBox="0 0 120 120" style="--size:84%"><use href="#pet-calm"></use></svg></span></div>
+<div class="focus-scrim"></div>
+<div class="lp-stack"><div class="lp-stack__inner">
+<div class="lp-stack__pet"><pausa-companion state="hello" size="96" aria-hidden="true"></pausa-companion></div>
+<div class="lp-card lp-card--enter glass cat cat--breathing"><div class="grain"></div>
+<div class="focus-card__top"><span class="badge"><svg class="icon"><use href="#c-breathing"></use></svg>Breathing</span><span class="pill"><svg class="icon"><use href="#i-clock"></use></svg>30s</span><span class="focus-card__hint"><span class="kbd">esc</span></span></div>
+<p class="focus-card__text" style="margin:0">One slow breath? I'll do it with you.</p>
+<div class="focus-card__actions"><span class="lp-fakebtn lp-fakebtn--primary" style="height:40px;padding:0 18px;font-size:14.5px">Take a moment</span><span class="lp-fakebtn" style="height:40px;font-size:14.5px">Later</span></div>
+</div></div></div>
+</div></div>
+</section>
+<section class="lp-section lp-section--tint" id="what" aria-labelledby="what-title">
+<div class="lp-wrap">
+<div class="lp-head lp-reveal"><h2 class="lp-h2" id="what-title">Small pauses for a calmer day.</h2><p class="lp-sub">A nudge, a moment, then back to what you were doing.</p></div>
+<div class="lp-features">
+<article class="lp-feature lp-reveal cat cat--present-moment">
+<div class="lp-feature__art" aria-hidden="true"><div style="display:flex;flex-direction:column;align-items:center;gap:6px;width:100%">
+<pausa-companion state="waiting" size="72" aria-hidden="true"></pausa-companion>
+<div class="lp-mini-settings bento-card"><span class="settings-heading"><span style="display:flex;gap:6px;align-items:center"><svg class="icon"><use href="#i-clock"></use></svg>Remind me every</span></span><div class="segmented"><span class="segmented__opt" style="display:grid;place-items:center">15m</span><span class="segmented__opt" style="display:grid;place-items:center">30m</span><span class="segmented__opt" aria-checked="true" style="display:grid;place-items:center">1h</span><span class="segmented__opt" style="display:grid;place-items:center">2h</span><span class="segmented__opt" style="display:grid;place-items:center">4h</span></div><div class="toggle-row" style="font-size:13.5px"><span class="toggle-row__label"><svg class="icon"><use href="#i-moon"></use></svg>Quiet hours</span><span class="toggle" aria-checked="true" style="display:block"></span></div></div>
+</div></div>
+<div class="lp-feature__body"><h3 class="lp-h3">A gentle nudge</h3><p class="lp-p">Choose your rhythm, from every 15 minutes to every 4 hours. Quiet hours and a pause switch keep Pausa out of the way when you need it to be.</p></div>
+</article>
+<article class="lp-feature lp-reveal cat cat--letting-go">
+<div class="lp-feature__art desk" style="display:block" role="img" aria-label="A small desktop with everything blurred behind a floating card above the Dock.">
+<div aria-hidden="true">
+<div class="win" style="left:6%;top:10%;width:58%;height:56%"><div class="win__bar" style="height:24px"><span class="win__dot" style="width:9px;height:9px"></span><span class="win__dot" style="width:9px;height:9px"></span><span class="win__dot" style="width:9px;height:9px"></span></div><div class="win__body" style="padding:14px"><div class="win__line"></div><div class="win__line" style="width:70%"></div></div></div>
+<div class="win" style="left:46%;top:22%;width:48%;height:46%"><div class="win__bar" style="height:24px"><span class="win__dot" style="width:9px;height:9px"></span><span class="win__dot" style="width:9px;height:9px"></span><span class="win__dot" style="width:9px;height:9px"></span></div></div>
+<div class="dock" style="height:40px;padding:5px 7px;gap:5px;border-radius:13px"><span class="dock__app" style="--c:#cdd6e4;width:28px;height:28px;border-radius:7px"></span><span class="dock__app" style="--c:#e8d9b8;width:28px;height:28px;border-radius:7px"></span><span class="dock__app" style="--c:#c7dccf;width:28px;height:28px;border-radius:7px"></span><span class="dock__app app-icon" style="width:28px;height:28px;border-radius:7px"></span></div>
+<div class="focus-scrim" style="z-index:4"></div>
+<div class="lp-stack" style="bottom:60px"><div class="lp-stack__inner lp-stack__inner--sm">
+<div class="lp-card lp-card--sm glass cat cat--present-moment"><div class="focus-card__top"><span class="badge"><svg class="icon"><use href="#c-present-moment"></use></svg>Present moment</span><span class="focus-card__hint"><span class="kbd">esc</span></span></div><p class="focus-card__text" style="margin:0">Name three things you can see right now.</p><div class="focus-card__actions"><span class="lp-fakebtn lp-fakebtn--primary">Take a moment</span><span class="lp-fakebtn">Later</span></div></div>
+</div></div></div></div>
+<div class="lp-feature__body"><h3 class="lp-h3">A pause that really pauses</h3><p class="lp-p">When it's time, a glass card floats up just above your Dock and everything behind it softly blurs. Press Esc or “Later” and it's gone.</p></div>
+</article>
+<article class="lp-feature lp-reveal cat cat--breathing">
+<div class="lp-feature__art" data-pattern="box" role="img" aria-label="Box breathing demo: a breathing orb grows and shrinks on a 4-4-4-4 count while Pip breathes along."><div aria-hidden="true" style="display:flex;flex-direction:column;align-items:center;gap:10px">
+<div style="display:flex;align-items:flex-end"><div class="companion-ground" style="margin-right:-14px;position:relative;z-index:1"><pausa-companion state="breathe" size="80" aria-hidden="true"></pausa-companion></div><div class="orb orb--box" style="--size:168px"><div class="orb__breath"><span class="orb__ring"></span><span class="orb__ring orb__ring--2"></span><span class="orb__blob orb__blob--3"></span><span class="orb__blob orb__blob--2"></span><span class="orb__blob"></span></div></div></div>
+<div class="breath-text" style="font-size:19px;text-align:center"><span class="breath-text__in">Breathe in…</span><span class="breath-text__hold">Hold…</span><span class="breath-text__out">Breathe out…</span><span class="breath-text__static">In 4 · Hold 4 · Out 4 · Hold 4</span></div>
+</div></div>
+<div class="lp-feature__body"><h3 class="lp-h3">Breathe along</h3><p class="lp-p">Four techniques with a live guide: box breathing, 4-7-8, coherent breathing and the physiological sigh. The orb and Pip breathe with you.</p></div>
+</article>
+<article class="lp-feature lp-reveal cat cat--gratitude">
+<div class="lp-feature__art" role="img" aria-label="Pip's five growth stages: seed, sprout, seedling, small plant, flowering."><div class="lp-garden" aria-hidden="true">
+<div><svg class="companion-static" viewBox="0 0 120 120" style="--size:58px"><use href="#pet-stage-1"></use></svg>Seed</div>
+<div><svg class="companion-static" viewBox="0 0 120 120" style="--size:62px"><use href="#pet-stage-2"></use></svg>Sprout</div>
+<div><svg class="companion-static" viewBox="0 0 120 120" style="--size:68px"><use href="#pet-stage-3"></use></svg>Seedling</div>
+<div><svg class="companion-static" viewBox="0 0 120 120" style="--size:74px"><use href="#pet-stage-4"></use></svg>Small plant</div>
+<div><svg class="companion-static" viewBox="0 0 120 120" style="--size:80px"><use href="#pet-stage-5"></use></svg>Flowering</div>
+</div></div>
+<div class="lp-feature__body"><h3 class="lp-h3">Watch Pip grow</h3><p class="lp-p">Pip grows a little with every pause you take, from seed to flowering. No streaks, no guilt: days off change nothing. Call it Pip, Sprig, Fern, or anything you like.</p></div>
+</article>
+</div>
+<div class="lp-kinds lp-reveal"><span class="lp-kinds__label">Ten kinds of pauses. Pick the ones you like:</span>
+<span class="badge cat cat--breathing"><svg class="icon" aria-hidden="true"><use href="#c-breathing"></use></svg>Breathing</span>
+<span class="badge cat cat--gratitude"><svg class="icon" aria-hidden="true"><use href="#c-gratitude"></use></svg>Gratitude</span>
+<span class="badge cat cat--body-scan"><svg class="icon" aria-hidden="true"><use href="#c-body-scan"></use></svg>Body scan</span>
+<span class="badge cat cat--present-moment"><svg class="icon" aria-hidden="true"><use href="#c-present-moment"></use></svg>Present moment</span>
+<span class="badge cat cat--compassion"><svg class="icon" aria-hidden="true"><use href="#c-compassion"></use></svg>Compassion</span>
+<span class="badge cat cat--movement"><svg class="icon" aria-hidden="true"><use href="#c-movement"></use></svg>Movement</span>
+<span class="badge cat cat--nature"><svg class="icon" aria-hidden="true"><use href="#c-nature"></use></svg>Nature</span>
+<span class="badge cat cat--journaling"><svg class="icon" aria-hidden="true"><use href="#c-journaling"></use></svg>Journaling</span>
+<span class="badge cat cat--focus"><svg class="icon" aria-hidden="true"><use href="#c-focus"></use></svg>Focus</span>
+<span class="badge cat cat--letting-go"><svg class="icon" aria-hidden="true"><use href="#c-letting-go"></use></svg>Letting go</span>
+</div>
+</div></section>
+<section class="lp-section" id="see" aria-labelledby="see-title">
+<div class="lp-wrap">
+<div class="lp-head lp-reveal"><h2 class="lp-h2" id="see-title">See it on your desktop</h2><p class="lp-sub">A sprout in the menu bar, a friend in the Dock, and a card that shows up only when it's time. Light and dark follow your Mac.</p></div>
+<div class="lp-see">
+<figure class="lp-reveal"><div class="lp-desk desk" data-theme="light" role="img" aria-label="Light mode. A Mac desktop with the Pausa sprout in the menu bar and the Pausa icon in the Dock. The open windows are softly blurred behind a glass card above the Dock: Pip and the tip “Think of one person who made your day better”, with Take a moment and Later buttons."><div aria-hidden="true">
+<div class="desk__menubar"><b>Studio</b><span>File</span><span>Edit</span><div class="desk__tray"><span class="tray-item"><svg viewBox="0 0 18 18"><use href="#t-sprout-new"></use></svg></span><span style="padding:0 4px">14:05</span></div></div>
+<div class="win" style="left:7%;top:12%;width:56%;height:56%"><div class="win__bar" style="height:26px"><span class="win__dot" style="width:10px;height:10px"></span><span class="win__dot" style="width:10px;height:10px"></span><span class="win__dot" style="width:10px;height:10px"></span></div><div class="win__body" style="padding:16px"><div class="win__line" style="width:40%"></div><div class="win__line"></div><div class="win__line" style="width:75%"></div></div></div>
+<div class="win" style="left:48%;top:22%;width:46%;height:48%"><div class="win__bar" style="height:26px"><span class="win__dot" style="width:10px;height:10px"></span><span class="win__dot" style="width:10px;height:10px"></span><span class="win__dot" style="width:10px;height:10px"></span></div></div>
+<div class="dock" style="height:44px;padding:6px 8px;gap:6px;border-radius:14px"><span class="dock__app" style="--c:#cdd6e4;width:32px;height:32px;border-radius:8px"></span><span class="dock__app" style="--c:#e8d9b8;width:32px;height:32px;border-radius:8px"></span><span class="dock__app" style="--c:#d9c8de;width:32px;height:32px;border-radius:8px"></span><span class="dock__app" style="--c:#c7dccf;width:32px;height:32px;border-radius:8px"></span><span class="dock__app app-icon" style="width:32px;height:32px;border-radius:8px;--pet-body:rgba(255,255,255,.5);--pet-leaf:rgba(255,255,255,.62);--pet-ink:#fff;--pet-eye:#1f4a30;--pet-sw:7"><svg class="companion-static" viewBox="0 0 120 120" style="--size:84%"><use href="#pet-calm"></use></svg></span></div>
+<div class="focus-scrim" style="z-index:4"></div>
+<div class="lp-stack" style="bottom:68px"><div class="lp-stack__inner" style="width:min(340px, 88%)">
+<div class="lp-card lp-card--row glass cat cat--gratitude" style="padding:14px 16px;border-radius:24px"><div class="companion-ground" style="flex:none"><pausa-companion state="calm" size="60" aria-hidden="true"></pausa-companion></div>
+<div class="focus-card__body" style="gap:8px"><span class="badge badge--small" style="align-self:flex-start"><svg class="icon"><use href="#c-gratitude"></use></svg>Gratitude</span><p class="focus-card__text" style="margin:0;font-size:15.5px">Think of one person who made your day better.</p><div class="focus-card__actions"><span class="lp-fakebtn lp-fakebtn--primary">Take a moment</span><span class="lp-fakebtn">Later</span></div></div></div>
+</div></div></div></div><figcaption>Light</figcaption></figure>
+<figure class="lp-reveal"><div class="lp-desk desk" data-theme="dark" role="img" aria-label="Dark mode. A Mac desktop with the Pausa sprout in the menu bar and the Pausa icon in the Dock. The open windows are softly blurred behind a glass card above the Dock: Pip and the tip “Think of one person who made your day better”, with Take a moment and Later buttons."><div aria-hidden="true">
+<div class="desk__menubar"><b>Studio</b><span>File</span><span>Edit</span><div class="desk__tray"><span class="tray-item"><svg viewBox="0 0 18 18"><use href="#t-sprout-new"></use></svg></span><span style="padding:0 4px">14:05</span></div></div>
+<div class="win" style="left:7%;top:12%;width:56%;height:56%"><div class="win__bar" style="height:26px"><span class="win__dot" style="width:10px;height:10px"></span><span class="win__dot" style="width:10px;height:10px"></span><span class="win__dot" style="width:10px;height:10px"></span></div><div class="win__body" style="padding:16px"><div class="win__line" style="width:40%"></div><div class="win__line"></div><div class="win__line" style="width:75%"></div></div></div>
+<div class="win" style="left:48%;top:22%;width:46%;height:48%"><div class="win__bar" style="height:26px"><span class="win__dot" style="width:10px;height:10px"></span><span class="win__dot" style="width:10px;height:10px"></span><span class="win__dot" style="width:10px;height:10px"></span></div></div>
+<div class="dock" style="height:44px;padding:6px 8px;gap:6px;border-radius:14px"><span class="dock__app" style="--c:#cdd6e4;width:32px;height:32px;border-radius:8px"></span><span class="dock__app" style="--c:#e8d9b8;width:32px;height:32px;border-radius:8px"></span><span class="dock__app" style="--c:#d9c8de;width:32px;height:32px;border-radius:8px"></span><span class="dock__app" style="--c:#c7dccf;width:32px;height:32px;border-radius:8px"></span><span class="dock__app app-icon" style="width:32px;height:32px;border-radius:8px;--pet-body:rgba(255,255,255,.5);--pet-leaf:rgba(255,255,255,.62);--pet-ink:#fff;--pet-eye:#1f4a30;--pet-sw:7"><svg class="companion-static" viewBox="0 0 120 120" style="--size:84%"><use href="#pet-calm"></use></svg></span></div>
+<div class="focus-scrim" style="z-index:4"></div>
+<div class="lp-stack" style="bottom:68px"><div class="lp-stack__inner" style="width:min(340px, 88%)">
+<div class="lp-card lp-card--row glass cat cat--gratitude" style="padding:14px 16px;border-radius:24px"><div class="companion-ground" style="flex:none"><pausa-companion state="calm" size="60" aria-hidden="true"></pausa-companion></div>
+<div class="focus-card__body" style="gap:8px"><span class="badge badge--small" style="align-self:flex-start"><svg class="icon"><use href="#c-gratitude"></use></svg>Gratitude</span><p class="focus-card__text" style="margin:0;font-size:15.5px">Think of one person who made your day better.</p><div class="focus-card__actions"><span class="lp-fakebtn lp-fakebtn--primary">Take a moment</span><span class="lp-fakebtn">Later</span></div></div></div>
+</div></div></div></div><figcaption>Dark</figcaption></figure>
+</div></div></section>
+<section class="lp-section lp-section--tint" id="why" aria-labelledby="why-title">
+<div class="lp-wrap lp-why">
+<div class="lp-why__text lp-reveal"><h2 class="lp-h2" id="why-title">Why Pausa exists</h2>
+<p class="lp-sub">Working at a screen, hours slip by in one long stretch. Stopping for a few breaths now and then is easy to agree with and easy to forget.</p>
+<p class="lp-sub">Pausa is a small, kind reminder to take that pause, and a friendly face to take it with.</p></div>
+<blockquote class="lp-quote lp-reveal"><pausa-companion state="calm" size="80" aria-hidden="true"></pausa-companion><div><p>[A PERSONAL LINE FROM THE MAKER]</p><cite>[MAKER NAME], maker of Pausa</cite></div></blockquote>
+</div></section>
+<section class="lp-section" id="privacy" aria-labelledby="privacy-title">
+<div class="lp-wrap">
+<div class="lp-head lp-reveal"><h2 class="lp-h2" id="privacy-title">Private by design</h2><p class="lp-sub">Pausa is a quiet guest on your Mac. It keeps to itself.</p></div>
+<div class="lp-privacy">
+<div class="lp-point lp-reveal cat cat--focus"><span class="lp-point__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="12" rx="2.5"></rect><path d="M9 20h6M12 16.5V20"></path></svg></span><h3 class="lp-h3" style="font-size:22px">Stays on your Mac</h3><p class="lp-p">Your settings and Pip's garden live on your computer. Nothing to sync, nothing to sign up for.</p></div>
+<div class="lp-point lp-reveal cat cat--letting-go"><span class="lp-point__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z"></path><circle cx="12" cy="12" r="2.5"></circle><path d="M4.5 4.5l15 15"></path></svg></span><h3 class="lp-h3" style="font-size:22px">No accounts. No tracking.</h3><p class="lp-p">No sign-in, no analytics, no AI services.</p></div>
+<div class="lp-point lp-reveal cat cat--gratitude"><span class="lp-point__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M5 4.5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8l-5 4v-4H5a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2z"></path><path d="M8.5 10.5l2.2 2.2 4.8-4.7"></path></svg></span><h3 class="lp-h3" style="font-size:22px">Feedback, only if you want</h3><p class="lp-p">Sending feedback is optional, and you see exactly what will be sent before it goes.</p></div>
+</div></div></section>
+<section class="lp-wrap" id="wellbeing" aria-labelledby="care-title" style="padding-bottom:96px">
+<div class="lp-care lp-reveal"><svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg>
+<div style="display:flex;flex-direction:column;gap:10px"><h2 class="lp-h3" id="care-title">A word about wellbeing</h2>
+<p class="lp-p" style="color:var(--text)">Pausa is a gentle companion, not a medical tool or medical advice. If you're struggling, please talk to someone you trust or a professional.</p>
+<a href="#" style="font:600 16px/1.4 var(--font-display);min-height:40px;display:inline-flex;align-items:center">[LOCAL HELP RESOURCES LINK]</a></div></div>
+</section>
+<section class="lp-wrap" id="beta" aria-labelledby="beta-title" style="padding-bottom:96px">
+<div class="lp-beta glass lp-reveal"><div class="grain"></div>
+<div style="position:relative;z-index:1"><pausa-companion state="cheering" size="120" aria-hidden="true"></pausa-companion></div>
+<h2 class="lp-h2" id="beta-title">Join the beta</h2>
+<p class="lp-sub">Pausa is in a small, closed beta. Want to try it? Get in touch.</p>
+<div class="lp-actions" style="justify-content:center"><a class="btn btn--primary lp-btn" href="mailto:[CONTACT EMAIL]?subject=Pausa%20beta"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="M4 7l8 6 8-6"></path></svg>Email to join</a></div>
+<p class="lp-note">Testers receive the installer privately. There's nothing to download here.</p>
+</div></section>
+</main>
+<footer class="lp-footer"><div class="lp-wrap">
+<div class="lp-footer__row"><svg class="companion-static companion-static--tiny" viewBox="0 0 120 120" style="--size:28px;--pet-sw:7" aria-hidden="true"><use href="#pet-calm"></use></svg><span style="font:600 18px/1 var(--font-display)">Pausa</span><span class="lp-pill">Closed beta</span>
+<nav class="lp-footer__links" aria-label="Footer"><a href="#">Privacy note</a><a href="mailto:[CONTACT EMAIL]">Contact</a></nav></div>
+<p class="lp-footer__fine">Pausa is not medical advice. Made for macOS.</p>
+</div></footer>
+</div>
+</body>
+</html>
