@@ -7,14 +7,10 @@ Plain HTML and CSS, no framework and no build step. Fonts (Fredoka and Nunito, S
 self-hosted in `fonts/`, so the page makes no requests to third parties. The only JavaScript is the icon and
 companion sprites in `js/`.
 
-## Before publishing
+## Contact address
 
-Search for these placeholders and replace them:
-
-- `[CONTACT EMAIL]` (two `mailto:` links)
-- `[LOCAL HELP RESOURCES LINK]`
-- `[A PERSONAL LINE FROM THE MAKER]` and `[MAKER NAME]`
-- the footer "Privacy note" link (`href="#"`)
+The page uses `pausa.companion.app@gmail.com` (three `mailto:` links: Join the beta, the privacy note and the
+footer). Search for it if you ever need to change it.
 
 ## Preview locally
 
