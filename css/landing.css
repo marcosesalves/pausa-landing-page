@@ -101,8 +101,9 @@
 .lp-care .icon { width: 28px; height: 28px; color: var(--text-muted); flex: none; margin-top: 4px; }
 .lp-beta { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; padding: 56px 32px 48px; border-radius: 40px; overflow: hidden; }
 .lp-beta .lp-h2, .lp-beta .lp-sub, .lp-beta .lp-actions { position: relative; z-index: 1; }
-.lp-beta .lp-sub { max-width: 36ch; }
-.lp-note { margin: 0; font: 600 14.5px/1.45 var(--font-body); color: var(--text-muted); position: relative; z-index: 1; }
+.lp-beta .lp-sub { max-width: 46ch; }
+.lp-note { margin: 0; max-width: 62ch; font: 600 14.5px/1.45 var(--font-body); color: var(--text-muted); position: relative; z-index: 1; }
+.lp-note code { font-size: .92em; overflow-wrap: anywhere; }
 
 /* Footer */
 .lp-footer { padding: 40px 0 48px; border-top: 1px solid var(--line); }
