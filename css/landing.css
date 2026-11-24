@@ -160,3 +160,68 @@
 /* Added for the static site: the global ".lp a" colour was winning over the primary button text on the
    skip link, making it invisible when focused. */
 .lp .lp-skip, .lp .lp-skip:hover { color: var(--accent-contrast); }
+
+/* ==========================================================================
+   Windows 11 and macOS: OS switch, Windows scenes, download cards
+   ========================================================================== */
+
+/* OS switch (segmented control). Hero: hidden radios + :has(). See it: anchor links. */
+.lp-os-switch { display: inline-flex; gap: 4px; padding: 4px; border-radius: var(--r-pill); background: var(--surface-2); align-self: center; }
+.lp-os-switch label, .lp-os-switch a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 18px; border-radius: var(--r-pill);
+  font: 600 15px/1 var(--font-display); color: var(--text-muted); text-decoration: none; cursor: pointer; transition: background-color var(--d-fast), color var(--d-fast); }
+.lp .lp-os-switch a { color: var(--text-muted); }
+.lp .lp-os-switch a:hover { color: var(--text); background: var(--card-fill); }
+.lp-os-switch--see { margin: 0 0 20px; }
+.lp-hero__scene { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.lp-hero__scene .lp-os-switch { align-self: flex-start; }
+.lp-hero__scene .lp-scene { width: 100%; }
+#os-mac:checked ~ .lp-os-switch label[for="os-mac"],
+#os-win:checked ~ .lp-os-switch label[for="os-win"] { background: var(--card-fill); color: var(--text); box-shadow: var(--shadow-1); }
+.lp-hero__scene:has(#os-mac:focus-visible) label[for="os-mac"],
+.lp-hero__scene:has(#os-win:focus-visible) label[for="os-win"] { outline: 2.5px solid var(--ring); outline-offset: 2px; }
+/* Without :has() support both scenes simply stack, and the radios are not needed */
+@supports selector(:has(*)) {
+  .lp-hero__scene:has(#os-mac:checked) .lp-scene--win,
+  .lp-hero__scene:has(#os-win:checked) .lp-scene--mac { display: none; }
+}
+@supports not selector(:has(*)) { .lp-hero__scene .lp-os-switch { display: none; } }
+
+/* Windows 11 desktop: rounded windows with caption buttons, centred taskbar, tray */
+.win--w { border-radius: 8px; }
+.win--w .win__bar { justify-content: flex-end; padding: 0 4px 0 12px; gap: 0; }
+.wcap { display: flex; align-items: center; color: var(--text-muted); }
+.wcap i { position: relative; display: block; width: 28px; height: 100%; min-height: 20px; }
+.wcap i::before, .wcap i::after { content: ""; position: absolute; left: 50%; top: 50%; box-sizing: border-box; }
+.wcap__min::before { width: 9px; height: 1.5px; background: currentColor; transform: translate(-50%, -50%); }
+.wcap__max::before { width: 8px; height: 8px; border: 1.5px solid currentColor; border-radius: 1.5px; transform: translate(-50%, -50%); }
+.wcap__x::before, .wcap__x::after { width: 11px; height: 1.5px; background: currentColor; }
+.wcap__x::before { transform: translate(-50%, -50%) rotate(45deg); }
+.wcap__x::after { transform: translate(-50%, -50%) rotate(-45deg); }
+.taskbar { position: absolute; left: 0; right: 0; bottom: 0; height: 44px; z-index: 4; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 0 10px;
+  background: var(--card-fill); -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); border-top: 1px solid var(--line); }
+.taskbar .dock__app { width: 28px; height: 28px; border-radius: 7px; flex: none; }
+.taskbar__tray { position: absolute; right: 12px; top: 0; bottom: 0; display: flex; align-items: center; gap: 8px; font: 600 11px/1 var(--font-display); color: var(--text); }
+.taskbar__tray svg { width: 15px; height: 15px; color: var(--accent); }
+.lp-scene .taskbar { height: 48px; }
+.lp-scene .taskbar .dock__app { width: 32px; height: 32px; }
+.lp-see [id="see-win"] { scroll-margin-top: 24px; }
+
+/* Download cards */
+.lp-dl { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; width: 100%; max-width: 860px; text-align: left; position: relative; z-index: 1; }
+.lp-dl > * { min-width: 0; }
+.lp-dl__card { display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 28px; background: var(--card-fill); box-shadow: var(--shadow-1), inset 0 1px 0 var(--spec); }
+.lp-dl__os { margin: 0; font: 600 26px/1.1 var(--font-display); }
+.lp-dl__meta { margin: 0; font: 600 15.5px/1.4 var(--font-body); color: var(--text-muted); }
+.lp-dl__card .lp-btn { align-self: flex-start; }
+.lp-dl__note { margin: 4px 0 0; font: 600 14.5px/1.5 var(--font-body); color: var(--text-muted); }
+.lp-dl__note strong { color: var(--text); }
+.lp-dl__slot:empty { display: none; }
+.lp-dl__foot { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+
+@container lp (max-width: 720px) {
+  .lp-dl { grid-template-columns: 1fr; }
+  .lp-dl__card { padding: 22px; }
+  .lp-dl__card .lp-btn { align-self: stretch; }
+  .lp-hero__scene .lp-os-switch { align-self: stretch; } .lp-hero__scene .lp-os-switch label { flex: 1; }
+  .lp-os-switch--see { align-self: stretch; } .lp-os-switch--see a { flex: 1; }
+}
